@@ -1,0 +1,69 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+         {
+              "label": "Docker Compose Up",
+              "type": "shell",
+              "command": "docker-compose up -d",
+              "problemMatcher": [],
+              "group": {
+                   "kind": "build",
+                   "isDefault": true
+              },
+              "presentation": {
+                   "reveal": "always",
+                   "panel": "new",
+                   "close": false,
+                   "focus": true 
+              }
+         },
+         {
+              "label": "Docker Compose Down",
+              "type": "shell",
+              "command": "docker compose down -v",
+              "problemMatcher": [],
+              "group": {
+                   "kind": "build",
+                   "isDefault": true
+              },
+              "presentation": {
+                   "reveal": "always",
+                   "panel": "new",
+                   "close": false,
+                   "focus": true
+              }
+         },
+         {
+               "label": "Docker Collect Static",
+               "type": "shell",
+               "command": "docker-compose exec web python manage.py collectstatic --noinput",
+               "problemMatcher": [],
+               "group": {
+                    "kind": "build",
+                    "isDefault": true
+               },
+               "presentation": {
+                    "reveal": "always",
+                    "panel": "new",
+                    "close": true,
+                    "focus": true
+               }
+          },
+          {
+               "label": "Open Web App",
+               "type": "shell",
+               "command": "open http://0.0.0.0:8000/admin",
+               "problemMatcher": [],
+               "group": {
+                    "kind": "build",
+                    "isDefault": true
+               },
+               "presentation": {
+                    "reveal": "always",
+                    "panel": "new",
+                    "close": true,
+                    "focus": true
+               }
+          }
+    ]
+}
