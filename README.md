@@ -46,6 +46,6 @@ This repository provides a boilerplate setup to Dockerize your Django project us
 
     This command collects all the static files (CSS, JavaScript, images, etc.) from your Django application into a central location. `docker-compose exec web` ensures that this command is executed inside the `web` service's container (where your Django application is running). The `--noinput` flag prevents any prompts and allows the process to complete automatically.
 
-After completing these steps, your Django project will be running inside Docker containers. You can usually access your project in your browser at `http://0.0.0.0:8000/` (this might vary depending on your Nginx configuration).
+After completing these steps, your Django project will be running inside Docker containers. You can usually access your project in your browser at [http://0.0.0.0:8000/](http://0.0.0.0:8000/) (this might vary depending on your Nginx configuration).
 
 This boilerplate provides a solid foundation for Dockerizing your Django projects. You can customize the Dockerfiles, `docker-compose.yml` file, and other configuration files according to your specific requirements.
